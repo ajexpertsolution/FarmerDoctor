@@ -1,0 +1,259 @@
+
+body
+{
+	/* background-image: url("images/background.jpg");
+	background-size: 1366px auto;
+	background-repeat: no-repeat; */
+	font-family: 'Varela Round', sans-serif !important;
+	font-size: 12px;
+}
+
+.font-family{
+	-webkit-appearance: none !important;
+	font-family: 'Varela Round', sans-serif !important;
+}
+
+.row{
+	margin: 0px !important;
+}
+
+#billing-bck{
+	background-image: url("images/hblur.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	width: auto;
+}
+
+#farmerreg-bck{
+	background-image: url("images/helpdesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	width: auto;
+}
+
+#farmersearch-bck{
+	background-image: url("images/1282794.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	width: auto;
+}
+
+::placeholder
+{
+	font-size: 13px;
+	color: #4a4a48 !important;
+}
+
+.btn-block + .btn-block {
+    margin-top: 0px;
+}
+
+.login-background
+{
+	background-color: white;
+	height: auto;
+	width: auto;
+	margin: 44px 30px 0px 30px;
+	padding: 30px 50px 20px 50px;
+	box-shadow:0px 0px 10px 5px #75cfb8;
+	border-radius: 0px;
+}
+
+.register-background
+{
+	background-color: white;
+	height: auto;
+	width: auto;
+	margin: 40px 30px 0px 30px;
+	padding: 30px 70px 40px 70px;
+	box-shadow:0px 0px 10px 5px #75cfb8;
+	border-radius: 0px;
+}
+
+.fsearch-background
+{
+	background-color: white;
+	height: auto;
+	width: auto;
+	margin: 77px 30px 0px 30px;
+	padding: 25px 60px 20px 60px;
+	box-shadow:0px 0px 10px 5px #ffdcdc;
+	border-radius: 0px;
+}
+
+.fregister-background
+{
+	background-color: white;
+	height: auto;
+	width: auto;
+	margin: 80px 30px 0px 30px;
+	padding: 30px 70px 50px 70px;
+	box-shadow:0px 0px 10px 5px #00917c;
+	border-radius: 0px;
+}
+
+.billing-background
+{
+	background-color: white;
+	height: auto;
+	width: 700px;
+	margin: 80px 30px 0px 30px;
+	padding: 30px 50px 50px 50px;
+	box-shadow:0px 0px 10px 5px #c1a1d3;
+	border-radius: 0px;
+}
+
+.login-borders{
+	border: 1px solid #929aab;
+	background-color: #474a56;
+	color: #ffffff;
+}
+
+.login-border{
+	border: 1px solid #929aab;
+}
+
+.br-0{
+	border-radius: 0px !important;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+#myDiv {
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  0% {background-color: #000000;}
+  25% {background-color: #f2ead3;}
+  50% {background-color: #f67280;}
+  75% {background-color: #cdeeaa;}
+  100% {background-color: #317ae1;}
+}
+
+.nav-item-m{
+	margin-left: 3rem !important;
+}
+
+.navbar-bg{
+	background-color: rgba(0,0,0,0.9);
+	color: white !important;
+	font-size: 15px;
+}
+
+.footer-bg{
+	background-color: rgba(0,0,0,1);
+	color: white !important;
+	font-size: 15px;
+	padding: 20px 0px 20px 0px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important;
+}
+
+/* The container */
+.radiobtn {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiobtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radiobtn:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiobtn input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiobtn input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiobtn .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+@media (max-width: 512px){
+	.btn-size{
+		text-align: center;
+	}
+
+	.radiobtn {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 15px;
+		margin-left: 0px !important;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.fsearch-background
+	{
+		background-color: white;
+		height: auto;
+		width: 400px !important;
+		margin: 80px 30px 0px 30px;
+		padding: 30px 43px 40px 43px;
+		box-shadow:0px 0px 10px 5px #ffdcdc;
+		border-radius: 0px;
+	}
+	.nav-item-m{
+		margin-left: 0rem !important;
+	}
+}
