@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.14.0/sweetalert2.all.min.js"></script>
+    <style>
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $(".deleteclick").click(function(){
+    const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
+    })
+    swalWithBootstrapButtons.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'No, cancel!',
+    reverseButtons: true
+    }).then((result) => {
+    if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire(
+    'Deleted!',
+    'Your file has been deleted.',
+    'success'
+    )
+    } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+    ) {
+    swalWithBootstrapButtons.fire(
+    'Cancelled',
+    'Your imaginary file is safe :)',
+    'error'
+    )
+    }
+    })
+    });
+    });
+    </script>
+  </head>
+  <body>
+    <section id="farmersearch-bck">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-bg">
+        <a class="navbar-brand" href="farmersearch.html"><i class="fa fa-home" style="color: #ff922b;"></i> Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active mr-4">
+              <a class="nav-link" href="billing.html"> <i class="fas fa-file-invoice" style="color: #ff922b;"></i> Billing <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item ">
+              <a class="nav-link text-white" href="farmerreg.html"><i class="fas fa-user-plus" style="color: #16c79a;"></i> Add Farmar</a>
+            </li>
+            <li class="nav-item nav-item-m">
+              <img src="images/log.webp" height="40px" width="40px">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Akshay Jadhav
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="index.html">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="d-flex justify-content-center">
+        <div class="fsearch-background mb-5">
+          <h2 class="text-center text-secondary mt-1"><b>WELCOME</b></h2>
+          <form action="" method="post" class="mt-4">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text login-borders br-0"><i class="fa fa-search" aria-hidden="true"></i></span>
+              </div>
+              <input type="text" name="farmerdetails" id="farmerdetails" class="form-control form-control-lg login-border br-0" placeholder="Enter Farmer Details">
+            </div>
+            <div class="d-flex justify-content-center mt-4 pb-4">
+              <input type="submit" name="submit" value="SEARCH" class="btn btn-block btn-success br-0">
+              <a href="index.html" class="btn btn-block btn-danger ml-4 br-0">CANCEL</a>
+            </div>
+            <h6 class="text-center mt-2">NEW FARMER?</h6>
+            <a href="farmerreg.html" class="text-center btn btn-block btn-info br-0 mt-3">ADD NEW FARMER</a>
+          </form>
+          <br>
+          <hr>
+          <br>
+          <div class="table-responsive-md">
+            <table class="table table-hover table-bordered text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th>SR.NO</th>
+                  <th>NAME</th>
+                  <th>MOBILE</th>
+                  <th>PAID BILL</th>
+                  <th>DUE BILL</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Akshay</td>
+                  <td>8765</td>
+                  <td>2000</td>
+                  <td>300</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <a href="billing.html" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                      <a href="#" class="btn btn-sm btn-danger ml-2 deleteclick"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Alok</td>
+                  <td>8938</td>
+                  <td>1000</td>
+                  <td>450</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <a href="billing.html" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                      <a href="#" class="btn btn-sm btn-danger ml-2 deleteclick"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="footer footer-bg">
+        <h6 class="text-center">© Copyright 2021, All Rights Reserved, <a href="" style="color: #ff922b">AJExpertSolutions Pvt Ltd.</a></h6>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farmer Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="farmerreg-bck">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-bg">
+        <a class="navbar-brand" href="farmersearch.html"><i class="fa fa-home" style="color: #ff922b;"></i> Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active mr-4">
+              <a class="nav-link" href="billing.html"> <i class="fas fa-file-invoice" style="color: #ff922b;"></i> Billing <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item ">
+              <a class="nav-link text-white" href="farmerreg.html"><i class="fas fa-user-plus" style="color: #16c79a;"></i> Add Farmar</a>
+            </li>
+            <li class="nav-item nav-item-m">
+              <img src="images/log.webp" height="40px" width="40px">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Akshay Jadhav
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="index.html">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="d-flex justify-content-center">
+        <div class="fregister-background mb-4">
+          <h2 class="text-center text-secondary mt-4"><b>FARMER REGISTRATION</b></h2>
+          <form action="" method="post" class="mt-5">
+            <input type="text" name="farmername" id="farmername" class="form-control form-group login-border br-0" placeholder="Enter Farmer Name">
+            <input type="number" name="mobile" id="mobile" class="form-control form-group login-border br-0" placeholder="Enter Mobile Number">
+            <textarea class="form-control form-group login-border br-0" placeholder="Address"></textarea>
+            <div class="row">
+              <div class="col-sm-3 col-md-3 col-lg-3 pl-0 pt-2"><p>Paid Bill</p></div>
+              <div class="col-sm-9 col-md-9 col-lg-9 pr-0"><input type="number" name="paidbill" class="form-control form-group login-border br-0"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 col-md-3 col-lg-3 pl-0 pt-2"><p>Paid Bill</p></div>
+              <div class="col-sm-9 col-md-9 col-lg-9 pr-0"><input type="number" name="paidbill" class="form-control form-group login-border br-0"></div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+              <input type="submit" name="submit" value="REGISTER" class="btn btn-block btn-warning br-0">
+              <a href="farmersearch.html" class="btn btn-block btn-danger ml-4 br-0">CANCEL</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer footer-bg">
+        <h6 class="text-center">© Copyright 2021, All Rights Reserved, <a href="" style="color: #ff922b">AJExpertSolutions Pvt Ltd.</a></h6>
+      </div>
+    </section>
+  </body>
+</html>
