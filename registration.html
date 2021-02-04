@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    </style>
+    <script>
+    $(document).ready(function(){
+    $(".doctor").hide();
+    $("#farmer").click(function(){
+    $(".doctor").hide();
+    $(".farmer").show();
+    });
+    $("#doctor").click(function(){
+    $(".farmer").hide();
+    $(".doctor").show();
+    });
+    });
+    </script>
+  </head>
+  <body>
+    <section id="myDiv">
+      <div class="d-flex justify-content-center">
+        <div class="register-background mb-4">
+          <h2 class="text-center text-secondary"><b>REGISTRATION</b></h2>
+          <div class="farmer mt-4">
+            <img src="images/famer.png" class="img-fluid d-block mx-auto login-image" height="120px" width="120px">
+          </div>
+          <div class="doctor mt-4">
+            <img src="images/doctor.png" class="img-fluid d-block mx-auto login-image" height="120px" width="120px">
+          </div>
+          <form action="" method="post" class="mt-4">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text login-borders br-0"><i class="fa fa-envelope"></i></span>
+              </div>
+              <input type="text" name="email" id="email" class="form-control login-border br-0" placeholder="MOBILE / EMAIL">
+            </div>
+            <span id="emailerror" class="text-danger font-weight-light"></span>
+            <div class="input-group form-group mt-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text login-borders br-0"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" name="password" id="password" class="form-control login-border br-0" placeholder="PASSWORD">
+              <div class="input-group-append">
+                <span class="input-group-text login-borders br-0" id="show_hide" name="show_hide" >
+                  <i class="fa fa-eye" id="eye"  aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+            <span id="passerror" class="text-danger font-weight-light"></span>
+            <div class="input-group form-group mt-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text login-borders br-0"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" name="password" id="password" class="form-control login-border br-0" placeholder="CONFIRM PASSWORD">
+              <div class="input-group-append">
+                <span class="input-group-text login-borders br-0" id="show_hide" name="show_hide" >
+                  <i class="fa fa-eye" id="eye"  aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+            <span id="cpasserror" class="text-danger font-weight-light"></span>
+            <div class="d-flex justify-content-start mt-4">
+              <label class="radiobtn mr-4" id="farmer">I'm Farmer
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="radiobtn ml-5" id="doctor">I'm Doctor
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+              <input type="submit" name="submit" value="REGISTER" class="btn btn-block btn-warning br-0">
+              <a href="index.html" class="btn btn-block btn-danger ml-4 br-0">CANCEL</a>
+            </div>
+            <h6 class="text-center mt-5">ALREADY USER? <a href="index.html">LOGIN HERE</a></h6>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="myDiv">
+      <div class="d-flex justify-content-center">
+        <div class="login-background mb-5">
+          <ul class="nav nav-pills nav-justified" role="tablist" style="border: 1px solid #929aab;">
+            <li class="nav-item">
+              <a class="nav-link active br-0" data-toggle="pill" href="#doctor">I'M DOCTOR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link br-0" data-toggle="pill" href="#farmer">I'M FARMER</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="doctor" class="container tab-pane active"><br>
+              <img src="images/doctor.png" class="img-fluid d-block mx-auto login-image" height="150px" width="150px">
+              <h2 class="text-center text-secondary mt-4"><b>DOCTOR LOGIN</b></h2>
+              <form action="" method="post" class="mt-4">
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text login-borders br-0"><i class="fa fa-envelope"></i></span>
+                  </div>
+                  <input type="text" name="email" id="email" class="form-control login-border br-0" placeholder="MOBILE / EMAIL">
+                </div>
+                <span id="emailerror" class="text-danger font-weight-light"></span>
+                <div class="input-group form-group mt-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text login-borders br-0"><i class="fas fa-key"></i></span>
+                  </div>
+                  <input type="password" name="password" id="password" class="form-control login-border br-0" placeholder="PASSWORD">
+                  <div class="input-group-append">
+                    <span class="input-group-text login-borders br-0" id="show_hide" name="show_hide" >
+                      <i class="fa fa-eye" id="eye"  aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+                <span id="passerror" class="text-danger font-weight-light"></span>
+                <div class="d-flex justify-content-center mt-5">
+                  <!-- <input type="submit" name="submit" value="LOGIN" class="btn btn-block btn-success br-0"> -->
+                  <a href="farmersearch.html" class="btn btn-block btn-success br-0">LOGIN</a>
+                  <a href="#" class="btn btn-block btn-danger ml-4 br-0">CANCEL</a>
+                </div>
+                <h6 class="text-center mt-5">NEW USER? <a href="registration.html">REGISTER HERE</a></h6>
+              </form>
+            </div>
+            <div id="farmer" class="container tab-pane fade"><br>
+              <img src="images/famer.png" class="img-fluid d-block mx-auto login-image" height="150px" width="150px">
+              <h2 class="text-center text-secondary mt-4"><b>FARMER LOGIN</b></h2>
+              <form action="" method="post" class="mt-4">
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text login-borders br-0"><i class="fa fa-envelope"></i></span>
+                  </div>
+                  <input type="text" name="email" id="email" class="form-control login-border br-0" placeholder="MOBILE / EMAIL">
+                </div>
+                <span id="emailerror" class="text-danger font-weight-light"></span>
+                <div class="input-group form-group mt-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text login-borders br-0"><i class="fas fa-key"></i></span>
+                  </div>
+                  <input type="password" name="password" id="password" class="form-control login-border br-0" placeholder="PASSWORD">
+                  <div class="input-group-append">
+                    <span class="input-group-text login-borders br-0" id="show_hide" name="show_hide" >
+                      <i class="fa fa-eye" id="eye"  aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+                <span id="passerror" class="text-danger font-weight-light"></span>
+                <div class="d-flex justify-content-center mt-5">
+                  <!-- <input type="submit" name="submit" value="LOGIN" class="btn btn-block btn-success br-0"> -->
+                  <a href="farmersearch.html" class="btn btn-block btn-success br-0">LOGIN</a>
+                  <a href="#" class="btn btn-block btn-danger ml-4 br-0">CANCEL</a>
+                </div>
+                <h6 class="text-center mt-5">NEW USER? <a href="registration.html">REGISTER HERE</a></h6>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
